@@ -1,4 +1,4 @@
-import gradio as gr
+git import gradio as gr
 from langchain_core.messages import HumanMessage, AIMessage
 from dotenv import load_dotenv
 from typing import Optional
@@ -29,5 +29,6 @@ def simple_chat(message: str, history: list[dict]) -> str:
 
     
 gr.ChatInterface(
-    fn=simple_chat
+    fn=simple_chat,
+    type="messages"
 ).launch()
